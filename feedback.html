@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-gold: #ffd700;
+            --accent-gold-dark: #b8860b;
+            --border-color: #333333;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .form-container {
+            background-color: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 12px;
+            min-height: 600px;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 500px) {
+            h1 { font-size: 1.8rem; }
+            .form-container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Feedback</h1>
+            <p class="subtitle">We value your thoughts</p>
+        </header>
+        
+        <div class="form-container">
+            <!-- Replace with your Google Form URL below -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLblfHrBH5ldkoQehFlnNHWCZwNyNlXLqA5AOJbRic_ppEvQ/viewform?embedded=true" width="100%" height="855" frameborder="0" marginheight="0" marginwidth="0" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
+        
+        <p class="note">Your response will be directly saved to our Google Sheet</p>
+    </div>
+
+    <!-- 
+    SETUP INSTRUCTIONS:
+    1. Go to your Google Sheet: https://docs.google.com/spreadsheets/d/1fXc6qayCS4y9jFINhZoq6vf_RvnRRwwe-zvTw3qzXfU
+    2. Click Tools > Create a form
+    3. Add fields: Name, Email, Rating (1-5), Feedback
+    4. Click the "Eye" icon to get the form link
+    5. Replace the iframe src above with your form URL
+    -->
+</body>
+</html>
